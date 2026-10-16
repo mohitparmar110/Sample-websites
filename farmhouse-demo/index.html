@@ -28,7 +28,7 @@
   .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:400}
 
   /* ---------- Header ---------- */
-  header{position:absolute;top:0;left:0;right:0;z-index:10}
+  header{position:absolute;top:0;left:0;right:0;z-index:10;background:rgba(245,239,230,.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid rgba(31,46,36,.1)}
   .nav{display:flex;align-items:center;justify-content:space-between;padding:26px 40px;max-width:1280px;margin:0 auto}
   .logo{display:flex;align-items:center;gap:14px}
   .logo svg{width:26px;height:34px}
@@ -38,8 +38,8 @@
   .menu a{position:relative}
   .menu a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:1px;background:currentColor;transition:width .3s}
   .menu a:hover::after{width:100%}
-  .tagline{font-size:10px;letter-spacing:.24em;text-transform:uppercase;text-align:right;line-height:1.6;color:#fff}
-  .tagline::after{content:"";display:block;width:28px;height:1px;background:#fff;margin:8px 0 0 auto}
+  .tagline{font-size:10px;letter-spacing:.24em;text-transform:uppercase;text-align:right;line-height:1.6;color:var(--forest)}
+  .tagline::after{content:"";display:block;width:28px;height:1px;background:var(--forest);margin:8px 0 0 auto}
 
   /* ---------- Hero ---------- */
   .hero{position:relative;height:640px;overflow:hidden;
@@ -47,8 +47,7 @@
   .hero .bg{position:absolute;inset:0}
   .hero .bg img{object-position:center 55%}
   .hero::before{content:"";position:absolute;inset:0;z-index:1;
-    background:linear-gradient(90deg,rgba(245,239,230,.92) 0%,rgba(245,239,230,.65) 28%,rgba(245,239,230,0) 55%),
-               linear-gradient(180deg,rgba(245,239,230,.85) 0%,rgba(245,239,230,0) 22%)}
+    background:linear-gradient(90deg,rgba(245,239,230,.86) 0%,rgba(245,239,230,.60) 29%,rgba(245,239,230,0) 62%)}
   .hero-copy{position:relative;z-index:2;padding:170px 0 0}
   .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(56px,8vw,104px);line-height:.92;letter-spacing:-.01em}
   .hero .lead{margin:34px 0 0 64px;font-size:12px;letter-spacing:.3em;line-height:1.8}
