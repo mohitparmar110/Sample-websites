@@ -146,7 +146,20 @@
     .foot-right{flex-direction:column;gap:24px}
     footer .menu{gap:22px}
   }
-.property-intro{display:grid;grid-template-columns:1.2fr 1fr;gap:58px;align-items:center}.property-photo{height:470px;overflow:hidden}.property-story h3,.surroundings-copy h3{font-family:var(--serif);font-weight:400;font-size:clamp(34px,3.7vw,52px);line-height:1.06;margin:18px 0 22px}.property-story p,.surroundings-copy p,.section-desc{font-size:15px;line-height:1.9;color:var(--muted);margin-bottom:22px}.property-story .link-line{display:inline-flex;margin-top:15px}.gallery{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:205px 205px;gap:15px}.gallery-large{grid-row:span 2}.gallery>div{overflow:hidden}.concept-note{font-size:11px;color:var(--muted);margin-top:18px;line-height:1.7}.amenities-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:34px}.amenities-grid article{min-height:175px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px}.amenities-grid article span{font-family:var(--serif);font-size:24px;color:#8b877b}.amenities-grid h3{font-family:var(--serif);font-size:26px;font-weight:500;margin:10px 0}.amenities-grid p{font-size:13px;line-height:1.6;color:var(--muted)}.surroundings-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.surroundings-photo{height:480px;overflow:hidden}.local-line{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding:17px 0;font-size:12px}.local-line span{color:var(--muted);text-align:right}.surroundings-copy .link-line{display:inline-flex;margin-top:20px}.footer-note{font-size:11px;max-width:220px;color:#d4d3c8}.booking-status{font-size:12px;color:var(--forest);line-height:1.6;padding:14px 10px}.booking-status[hidden]{display:none}@media(max-width:800px){.property-intro,.surroundings-grid{grid-template-columns:1fr;gap:30px}.property-photo,.surroundings-photo{height:360px}.amenities-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:640px){.gallery{grid-template-columns:1fr 1fr;grid-template-rows:260px 150px}.gallery-large{grid-column:span 2;grid-row:span 1}.amenities-grid{grid-template-columns:1fr}.property-photo{height:310px}.surroundings-photo{height:300px}.local-line{display:block}.local-line span{display:block;text-align:left;margin-top:6px}.footer-note{text-align:center}.booking{margin-top:-40px}}
+.property-intro{display:grid;grid-template-columns:1.2fr 1fr;gap:58px;align-items:center}.property-photo{height:470px;overflow:hidden}.property-story h3,.surroundings-copy h3{font-family:var(--serif);font-weight:400;font-size:clamp(34px,3.7vw,52px);line-height:1.06;margin:18px 0 22px}.property-story p,.surroundings-copy p,.section-desc{font-size:15px;line-height:1.9;color:var(--muted);margin-bottom:22px}.property-story .link-line{display:inline-flex;margin-top:15px}.gallery{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:205px 205px;gap:15px}.gallery-large{grid-row:span 2}.gallery>div{overflow:hidden}.concept-note{font-size:11px;color:var(--muted);margin-top:18px;line-height:1.7}
+.amenities-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:32px}
+.amenities-grid .amenity-card{min-width:0;min-height:0;padding:0;display:flex;flex-direction:column;background:#faf6f0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.amenity-image{position:relative;aspect-ratio:8/5;overflow:hidden;background:var(--cream-2)}
+.amenity-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s ease,filter .6s ease;filter:saturate(.83) contrast(.96)}
+.amenity-card:hover .amenity-image img{transform:scale(1.045);filter:saturate(.98) contrast(1)}
+.amenity-copy{padding:26px 28px 32px;flex:1;display:flex;flex-direction:column;align-items:flex-start}
+.amenity-number{font-family:var(--serif);font-size:23px;color:#988b78;line-height:1;display:block;margin-bottom:18px}
+.amenity-copy h3{font-family:var(--serif);font-weight:500;font-size:clamp(25px,2.1vw,31px);line-height:1.1;margin:0 0 14px}
+.amenity-copy p{font-family:var(--sans);font-size:13px;line-height:1.72;color:var(--muted);margin:0;max-width:30ch}
+@media(max-width:800px){.amenity-copy{padding:22px 22px 28px}}
+@media(max-width:640px){.amenity-image{aspect-ratio:8/5}.amenity-copy{padding:22px 24px 27px}.amenity-copy h3{font-size:30px}}
+@media(prefers-reduced-motion:reduce){.amenity-image img{transition:none}}
+.surroundings-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.surroundings-photo{height:480px;overflow:hidden}.local-line{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding:17px 0;font-size:12px}.local-line span{color:var(--muted);text-align:right}.surroundings-copy .link-line{display:inline-flex;margin-top:20px}.footer-note{font-size:11px;max-width:220px;color:#d4d3c8}.booking-status{font-size:12px;color:var(--forest);line-height:1.6;padding:14px 10px}.booking-status[hidden]{display:none}@media(max-width:800px){.property-intro,.surroundings-grid{grid-template-columns:1fr;gap:30px}.property-photo,.surroundings-photo{height:360px}.amenities-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:640px){.gallery{grid-template-columns:1fr 1fr;grid-template-rows:260px 150px}.gallery-large{grid-column:span 2;grid-row:span 1}.amenities-grid{grid-template-columns:1fr}.property-photo{height:310px}.surroundings-photo{height:300px}.local-line{display:block}.local-line span{display:block;text-align:left;margin-top:6px}.footer-note{text-align:center}.booking{margin-top:-40px}}
 </style>
 </head>
 <body>
@@ -217,9 +230,63 @@
 <section class="wrap cabins" id="gallery"><div class="section-head"><div><p class="eyebrow">A CLOSER LOOK</p><h2>Spaces to settle into.</h2></div></div>
 <div class="gallery"><div class="gallery-large"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1500&q=85" alt="Warm modern farmhouse interior"></div><div><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=85" alt="Considered living space"></div><div><img loading="lazy" src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=800&q=85" alt="Landscape around a countryside home"></div></div>
 <p class="concept-note">Concept gallery using illustrative photography. Replace with verified photographs of the actual farmhouse before client publication.</p></section>
-<section class="wrap cabins" id="amenities"><div class="section-head"><div><p class="eyebrow">AT YOUR OWN PACE</p><h2>The little things, thoughtfully considered.</h2></div></div>
-<p class="section-desc">A dedicated space for the property's amenities and comforts. The items below are suggested presentation categories—not verified facilities at this property.</p>
-<div class="amenities-grid"><article><span>01</span><h3>Living & lounging</h3><p>Spaces to gather, unwind and simply be.</p></article><article><span>02</span><h3>Restful rooms</h3><p>Bedroom details, sleeping arrangements and linen information.</p></article><article><span>03</span><h3>Food & dining</h3><p>Kitchen, dining and meal options, once confirmed.</p></article><article><span>04</span><h3>Outdoor moments</h3><p>Garden, seating and on-property experiences, once confirmed.</p></article><article><span>05</span><h3>Everyday essentials</h3><p>Wi-Fi, parking and accessibility details, once confirmed.</p></article><article><span>06</span><h3>Special requests</h3><p>Celebrations and arrangements subject to host confirmation.</p></article></div></section>
+<section class="wrap cabins" id="amenities">
+  <div class="section-head">
+    <div><p class="eyebrow">AT YOUR OWN PACE</p><h2>The little things, thoughtfully considered.</h2></div>
+  </div>
+  <p class="section-desc">From quiet interiors to time outdoors, discover the moments that make an escape feel different.</p>
+  <div class="amenities-grid">
+    <article class="amenity-card">
+      <div class="amenity-image"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=960&h=600&q=80" alt="Illustrative sunlit living room with natural finishes and comfortable seating" width="960" height="600" loading="lazy" decoding="async"></div>
+      <div class="amenity-copy">
+        <span class="amenity-number">01</span>
+        <h3>Living & lounging</h3>
+        <p>A little more room for slow mornings, good company and conversations that last.</p>
+      </div>
+    </article>
+    <article class="amenity-card">
+      <div class="amenity-image"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=960&h=600&q=80" alt="Illustrative calming bedroom with layered neutral linens" width="960" height="600" loading="lazy" decoding="async"></div>
+      <div class="amenity-copy">
+        <span class="amenity-number">02</span>
+        <h3>Restful rooms</h3>
+        <p>A softer pace after sunset, with space to rest and wake up unhurried.</p>
+      </div>
+    </article>
+    <article class="amenity-card">
+      <div class="amenity-image"><img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=960&h=600&q=80" alt="Illustrative warmly lit dining room arranged for shared meals" width="960" height="600" loading="lazy" decoding="async"></div>
+      <div class="amenity-copy">
+        <span class="amenity-number">03</span>
+        <h3>Food & dining</h3>
+        <p>Good food tastes even better when there's nowhere you need to rush.</p>
+      </div>
+    </article>
+    <article class="amenity-card">
+      <div class="amenity-image"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=960&h=600&q=80" alt="Illustrative green countryside landscape in natural daylight" width="960" height="600" loading="lazy" decoding="async"></div>
+      <div class="amenity-copy">
+        <span class="amenity-number">04</span>
+        <h3>Outdoor moments</h3>
+        <p>Fresh air, open skies and time to take in the world beyond the walls.</p>
+      </div>
+    </article>
+    <article class="amenity-card">
+      <div class="amenity-image"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=960&h=600&q=80" alt="Illustrative modern bathroom with clean practical finishes" width="960" height="600" loading="lazy" decoding="async"></div>
+      <div class="amenity-copy">
+        <span class="amenity-number">05</span>
+        <h3>Everyday essentials</h3>
+        <p>Thoughtful practical details make settling into a stay feel effortless.</p>
+      </div>
+    </article>
+    <article class="amenity-card">
+      <div class="amenity-image"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=960&h=600&q=80" alt="Illustrative intimate celebration with flowers and elegant table styling" width="960" height="600" loading="lazy" decoding="async"></div>
+      <div class="amenity-copy">
+        <span class="amenity-number">06</span>
+        <h3>Special requests</h3>
+        <p>For the moments worth celebrating, with arrangements discussed in advance.</p>
+      </div>
+    </article>
+  </div>
+  <p class="concept-note">Photographs illustrate the proposed presentation. Exact on-site amenities and special arrangements will be confirmed with the property owner.</p>
+</section>
 <section class="wrap cabins" id="surroundings"><div class="section-head"><div><p class="eyebrow">BEYOND THE GATE</p><h2>The beauty of being away.</h2></div></div>
 <div class="surroundings-grid"><div class="surroundings-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=85" alt="Peaceful green countryside landscape"></div><div class="surroundings-copy"><h3>Space to explore, or nowhere to be.</h3><p>Let the surrounding landscape become part of the experience. This section can showcase the property's actual views, approach road, walks, nearby attractions and local food.</p><div class="local-line"><strong>Nature & views</strong><span>Exact landscape details to confirm</span></div><div class="local-line"><strong>Places nearby</strong><span>Attractions and travel distances to confirm</span></div><div class="local-line"><strong>Getting here</strong><span>Location and arrival details to confirm</span></div><a href="#booking" class="link-line">Plan your visit ⟶</a></div></div></section>
 <!-- ======= WELLNESS ======= -->
