@@ -7,6 +7,7 @@
 <meta name="robots" content="noindex,follow">
 <link rel="canonical" href="https://fern-field-farmhouse-demo.pages.dev/">
 <link rel="preconnect" href="https://images.unsplash.com">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_IN">
 <meta property="og:site_name" content="Fern Cabin">
@@ -470,7 +471,19 @@ section[id]{scroll-margin-top:30px}
       <div class="tagline">Nature brings<br>us back</div>
       <div class="footer-note">Single farmhouse concept · Details subject to confirmation</div></div></div><div class="wrap footer-secondary"><nav aria-label="Legal and helpful links"><a href="/policies.html#booking-policy">Booking information</a><a href="/policies.html#cancellation">Cancellation</a><a href="/policies.html#house-rules">House rules</a><a href="/policies.html#privacy">Privacy policy</a><a href="#faq">FAQ</a></nav><p>© <span id="year"></span> Fern Cabin · Illustrative single-property website. No online bookings or payments.</p></div></footer>
 
-<script>
+<dialog class="enquiry-dialog" id="enquiryDialog" aria-labelledby="enquiryTitle">
+  <div class="dialog-top"><div><span class="eyebrow">YOUR STAY, YOUR WAY</span><h2 id="enquiryTitle">Prepare your enquiry.</h2></div><button type="button" class="dialog-close" id="closeEnquiry" aria-label="Close enquiry">×</button></div>
+  <p class="dialog-intro">Your dates are ready. Add your details to prepare a message you can copy or open as an email draft. This prototype does not transmit enquiries.</p>
+  <div class="selected-stay" id="selectedStay"></div>
+  <form id="enquiryDetails" class="details-form">
+    <label>Your name <input type="text" id="guestName" name="guestName" autocomplete="name" maxlength="90" required placeholder="Full name"></label>
+    <label>Your email <input type="email" id="guestEmail" name="guestEmail" autocomplete="email" maxlength="120" required placeholder="you@example.com"></label>
+    <label>Phone (optional) <input type="tel" id="guestPhone" name="guestPhone" autocomplete="tel" maxlength="25" placeholder="Your phone number"></label>
+    <label class="wide">Anything we should know? <textarea id="guestNote" name="guestNote" rows="3" maxlength="800" placeholder="Questions about your stay..."></textarea></label>
+    <button type="submit" class="btn-dark prepare-btn">Prepare enquiry <span aria-hidden="true">↗</span></button>
+  </form>
+  <div id="preparedEnquiry" class="prepared-enquiry" hidden><h3>Your message is ready.</h3><p>Nothing has been sent or booked. Copy this enquiry or open an email draft. Add the property's verified contact address before sending.</p><pre id="enquiryText"></pre><div class="enquiry-actions"><button type="button" id="copyEnquiry" class="btn-dark">Copy enquiry</button><a id="emailEnquiry" href="mailto:" class="secondary-btn">Open email draft ↗</a></div><p class="copy-status" role="status" id="copyStatus"></p></div>
+</dialog><a class="mobile-sticky-cta" href="#booking"><span>One private farmhouse <small>Enquire before you book</small></span><strong>Check dates ↗</strong></a><script>
 (() => {
 'use strict';
 const $ = id => document.getElementById(id);
@@ -510,17 +523,6 @@ const toggle=$('menuToggle'),menu=$('primaryMenu');
 toggle.addEventListener('click',()=>{const open=menu.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(open));});
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');}));
 })();
-</script><dialog class="enquiry-dialog" id="enquiryDialog" aria-labelledby="enquiryTitle">
-  <div class="dialog-top"><div><span class="eyebrow">YOUR STAY, YOUR WAY</span><h2 id="enquiryTitle">Prepare your enquiry.</h2></div><button type="button" class="dialog-close" id="closeEnquiry" aria-label="Close enquiry">×</button></div>
-  <p class="dialog-intro">Your dates are ready. Add your details to prepare a message you can copy or open as an email draft. This prototype does not transmit enquiries.</p>
-  <div class="selected-stay" id="selectedStay"></div>
-  <form id="enquiryDetails" class="details-form">
-    <label>Your name <input type="text" id="guestName" name="guestName" autocomplete="name" maxlength="90" required placeholder="Full name"></label>
-    <label>Your email <input type="email" id="guestEmail" name="guestEmail" autocomplete="email" maxlength="120" required placeholder="you@example.com"></label>
-    <label>Phone (optional) <input type="tel" id="guestPhone" name="guestPhone" autocomplete="tel" maxlength="25" placeholder="Your phone number"></label>
-    <label class="wide">Anything we should know? <textarea id="guestNote" name="guestNote" rows="3" maxlength="800" placeholder="Questions about your stay..."></textarea></label>
-    <button type="submit" class="btn-dark prepare-btn">Prepare enquiry <span aria-hidden="true">↗</span></button>
-  </form>
-  <div id="preparedEnquiry" class="prepared-enquiry" hidden><h3>Your message is ready.</h3><p>Nothing has been sent or booked. Copy this enquiry or open an email draft. Add the property's verified contact address before sending.</p><pre id="enquiryText"></pre><div class="enquiry-actions"><button type="button" id="copyEnquiry" class="btn-dark">Copy enquiry</button><a id="emailEnquiry" href="mailto:" class="secondary-btn">Open email draft ↗</a></div><p class="copy-status" role="status" id="copyStatus"></p></div>
-</dialog><a class="mobile-sticky-cta" href="#booking"><span>One private farmhouse <small>Enquire before you book</small></span><strong>Check dates ↗</strong></a></body>
+</script>
+</body>
 </html>
