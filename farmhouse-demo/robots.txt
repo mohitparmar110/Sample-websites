@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# This is a demonstration site. Remove the disallow and noindex tags only when verified property information and production policies are approved.
